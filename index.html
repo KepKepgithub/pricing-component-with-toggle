@@ -5,48 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+    <body>
+    <div class="page_wrap">
+        <header>
+          <h1 class="header__heading">Our Pricing</h1>
+          <div class="switch__wrap">
+            <span class="text">Annually</span>
+            <label for="switch__checkbox" class="switch"></label>
+            <span class="header__text">Monthly</span>
+          </div>
+        </header>
+        <!-- This checkbox controlls all card elements -->
+      <input type="checkbox" name="checkbox" id="switch__checkbox" class="switch__checkbox">
+      <section class="card__wrap">
 
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      	<article class="card">
+          <h6 class="card__title">Basic</h6>
+          	<p class="card__price">&dollar;19<span class="card__price--hidden">9</span>.99</p>
+          	<ul class="card__text_wrap">
+              <li class="card__text">500 GB Storage</li>
+              <li class="card__text">2 Users Allowed</li>
+              <li class="card__text">Send up to 3 GB</li>
+            </ul>
+          	<button class="card__button">Learn More</button>
+        </article>
+          
+      	<article class="card">
+          <h6 class="card__title">Professional</h6>
+          	<p class="card__price">&dollar;24<span class="card__price--hidden">9</span>.99</p>
+          	<ul class="card__text_wrap">
+              <li class="card__text">1 TB Storage</li>
+              <li class="card__text">5 Users Allowed</li>
+              <li class="card__text">Send up to 10 GB</li>
+          </ul>
+          <button class="card__button">Learn More</button>
+        </article>
+          
+      	<article class="card">
+          <h6 class="card__title">Master</h6>
+          	<p class="card__price">&dollar;39<span class="card__price--hidden">9</span>.99</p>
+          	<ul class="card__text_wrap">
+              <li class="card__text">2 TB Storage</li>
+              <li class="card__text">10 Users Allowed</li>
+              <li class="card__text">Send up to 20 GB</li>
+            </ul>
+          	<button class="card__button">Learn More</button>
+        </article>
+      </section>
+      <img src="./patterns/bg-top.svg" alt="pattern" class="pattern pattern--top">
+      <img src="./patterns/bg-bottom.svg" alt="pattern" class="pattern pattern--bottom">
+<!--       
+        <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+        </div> -->
+    </div>
+  </body>
 </html>
