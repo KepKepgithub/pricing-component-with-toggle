@@ -36,6 +36,7 @@ body {
 @media only screen and (min-width: 300px) {
   .header {
     padding-top: 2.5rem;
+    padding-bottom: 5rem;
     text-align: center;
   }
   .header__heading {
@@ -80,16 +81,14 @@ body {
   }
   .switch__checkbox {
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     width: 0;
     height: 0;
-    top: 20vh;
-  }
-  .switch__checkbox:focus ~ .header {
-    background-color: orange;
+    pointer-events: none;
   }
   .switch__checkbox:focus ~ .header .switch {
-    border: 2px solid blue;
+    -webkit-box-shadow: 0px 0px 10px 0 #b3b5c6;
+            box-shadow: 0px 0px 10px 0 #b3b5c6;
   }
   .switch__checkbox:checked ~ .header .switch::before {
     -webkit-transform: translateX(25px);
