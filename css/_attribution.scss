@@ -1,0 +1,12 @@
+.attribution{
+    text-align: center;
+    color: $light_blue;
+    padding-bottom: 1rem;
+    a{
+        text-decoration: none;
+        color: $dark_blue;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

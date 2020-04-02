@@ -259,4 +259,19 @@ body {
     right: 0;
   }
 }
+
+.attribution {
+  text-align: center;
+  color: #b3b5c6;
+  padding-bottom: 1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #494c5f;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=main.css.map */
