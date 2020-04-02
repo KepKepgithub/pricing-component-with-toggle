@@ -68,7 +68,7 @@ body {
     height: 20px;
     border-radius: 50%;
     background-color: white;
-    left: 2px;
+    right: 2px;
     top: 2px;
     -webkit-transition: all 150ms;
     transition: all 150ms;
@@ -98,8 +98,8 @@ body {
     opacity: 0.7;
   }
   .switch__checkbox:checked ~ .header .switch::before {
-    -webkit-transform: translateX(25px);
-            transform: translateX(25px);
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
   }
   .switch__checkbox:checked ~ .card__wrap .card__price--hidden {
     display: inline-block;

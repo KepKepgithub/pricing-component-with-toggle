@@ -26,7 +26,7 @@
                 height: 20px;
                 border-radius: 50%;
                 background-color: white;
-                left: 2px;
+                right: 2px;
                 top: 2px;
                 transition: all 150ms;
             }
@@ -55,7 +55,7 @@
     .switch__checkbox:checked ~ .header{
         .switch{
             &::before{
-                transform: translateX(25px)
+                transform: translateX(-25px)
             }
         }
     }
