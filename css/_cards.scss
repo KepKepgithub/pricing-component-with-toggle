@@ -72,15 +72,11 @@
             background: $gradient;
 
             border: 2px solid white;
-            &:hover,&:active{
+            &:hover,&:active,&:focus{
                 background: white;
                 color: #7478BF;
                 border: 2px solid #7478BF;
                 cursor: pointer;
-            }
-            &:focus{
-                outline: dashed;
-                outline-color: black;
             }
         }
         // the middle card

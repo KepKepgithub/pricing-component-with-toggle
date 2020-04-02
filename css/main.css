@@ -73,7 +73,7 @@ body {
     -webkit-transition: all 150ms;
     transition: all 150ms;
   }
-  .header .switch:hover {
+  .header .switch:hover, .header .switch:focus, .header .switch:active {
     opacity: 0.7;
   }
   .header .switch__wrap {
@@ -95,7 +95,7 @@ body {
     pointer-events: none;
   }
   .switch__checkbox:focus ~ .header .switch {
-    outline: dashed;
+    opacity: 0.7;
   }
   .switch__checkbox:checked ~ .header .switch::before {
     -webkit-transform: translateX(25px);
@@ -188,15 +188,11 @@ body {
     background: linear-gradient(to right, #a3a8f0, #696fdd);
     border: 2px solid white;
   }
-  .card__button:hover, .card__button:active {
+  .card__button:hover, .card__button:active, .card__button:focus {
     background: white;
     color: #7478BF;
     border: 2px solid #7478BF;
     cursor: pointer;
-  }
-  .card__button:focus {
-    outline: dashed;
-    outline-color: black;
   }
   .card:nth-child(2) {
     background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
