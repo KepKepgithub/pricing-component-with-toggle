@@ -1,0 +1,99 @@
+@media only screen and (min-width:300px){
+    .card{
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+        background-color: white;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.75rem 0;
+        margin-bottom: 1.5rem;
+        &__text_wrap{
+            list-style: none;
+            text-align: center;
+            margin-bottom: .75rem;
+        }
+        &__title{
+            font-size: 1.1rem;
+            color: $grayish_blue;
+            margin-bottom: 1.5rem;
+        }
+        &__price{
+            font-size: 4rem;
+            color: $dark_blue;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            &--hidden{
+                display: none;
+            }
+        }
+        &__currency_symbol{
+            font-size: 2rem;
+        }
+        &__text{
+            margin-bottom: 2.5rem;
+            color: $grayish_blue;
+            position: relative;
+            // top border
+            &::before{
+                position: absolute;
+                content: "";
+                width: 220%;
+                height: 2px;
+                background-color: $light_blue;
+                top: -1.25rem;
+                left: -60%;
+            }
+            // bottom border
+            &:nth-child(3){
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 220%;
+                    height: 2px;
+                    background-color: $light_blue;
+                    top: 2.25rem;
+                    left: -60%;
+                }
+            }
+        }
+        &__button{
+            text-transform: uppercase;
+            width: 86%;
+            padding: 1em 0;
+            color: white;
+            letter-spacing: .1rem;
+            border-radius: .5rem;
+            border: none;
+            background: $gradient;
+
+            border: 2px solid white;
+            &:hover,&:active{
+                background: white;
+                color: #7478BF;
+                border: 2px solid #7478BF;
+                cursor: pointer;
+            }
+        }
+        // the middle card
+        &:nth-child(2){
+            background: $gradient;
+            .card__price,.card__text,.card__title{
+                color: white;
+            }
+            .card__button{
+                background: white;
+                color: #7478BF;
+                &:hover{
+                    background: $gradient;
+                    border-color: white;
+                    color: white;
+                }
+            }
+        }
+    }
+}

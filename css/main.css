@@ -3,7 +3,7 @@ body {
   font-size: 15px;
 }
 
-body {
+body, button {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,6 +16,7 @@ body {
 
 body {
   background-color: #f6f6fe;
+  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 300px) {
@@ -24,6 +25,7 @@ body {
     width: 100%;
     margin: auto;
     padding: 0 1rem;
+    overflow: hidden;
   }
 }
 
@@ -38,6 +40,8 @@ body {
     padding-top: 2.5rem;
     padding-bottom: 5rem;
     text-align: center;
+    position: relative;
+    z-index: 1000;
   }
   .header__heading {
     color: #6d708d;
@@ -55,6 +59,7 @@ body {
     border-radius: 2rem;
     margin: 0 1.225rem;
     position: relative;
+    cursor: pointer;
   }
   .header .switch::before {
     content: "";
@@ -67,6 +72,9 @@ body {
     top: 2px;
     -webkit-transition: all 150ms;
     transition: all 150ms;
+  }
+  .header .switch:hover {
+    opacity: 0.7;
   }
   .header .switch__wrap {
     display: -webkit-box;
@@ -87,12 +95,132 @@ body {
     pointer-events: none;
   }
   .switch__checkbox:focus ~ .header .switch {
-    -webkit-box-shadow: 0px 0px 10px 0 #b3b5c6;
-            box-shadow: 0px 0px 10px 0 #b3b5c6;
+    outline: dashed;
   }
   .switch__checkbox:checked ~ .header .switch::before {
     -webkit-transform: translateX(25px);
             transform: translateX(25px);
+  }
+  .switch__checkbox:checked ~ .card__wrap .card__price--hidden {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  .card {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.75rem 0;
+    margin-bottom: 1.5rem;
+  }
+  .card__text_wrap {
+    list-style: none;
+    text-align: center;
+    margin-bottom: .75rem;
+  }
+  .card__title {
+    font-size: 1.1rem;
+    color: #6d708d;
+    margin-bottom: 1.5rem;
+  }
+  .card__price {
+    font-size: 4rem;
+    color: #494c5f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .card__price--hidden {
+    display: none;
+  }
+  .card__currency_symbol {
+    font-size: 2rem;
+  }
+  .card__text {
+    margin-bottom: 2.5rem;
+    color: #6d708d;
+    position: relative;
+  }
+  .card__text::before {
+    position: absolute;
+    content: "";
+    width: 220%;
+    height: 2px;
+    background-color: #b3b5c6;
+    top: -1.25rem;
+    left: -60%;
+  }
+  .card__text:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    width: 220%;
+    height: 2px;
+    background-color: #b3b5c6;
+    top: 2.25rem;
+    left: -60%;
+  }
+  .card__button {
+    text-transform: uppercase;
+    width: 86%;
+    padding: 1em 0;
+    color: white;
+    letter-spacing: .1rem;
+    border-radius: .5rem;
+    border: none;
+    background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    border: 2px solid white;
+  }
+  .card__button:hover, .card__button:active {
+    background: white;
+    color: #7478BF;
+    border: 2px solid #7478BF;
+    cursor: pointer;
+  }
+  .card:nth-child(2) {
+    background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+  }
+  .card:nth-child(2) .card__price, .card:nth-child(2) .card__text, .card:nth-child(2) .card__title {
+    color: white;
+  }
+  .card:nth-child(2) .card__button {
+    background: white;
+    color: #7478BF;
+  }
+  .card:nth-child(2) .card__button:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    border-color: white;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  .pattern--bottom {
+    display: none;
+  }
+  .pattern--top {
+    position: absolute;
+    top: -10%;
+    right: -40%;
   }
 }
 /*# sourceMappingURL=main.css.map */
