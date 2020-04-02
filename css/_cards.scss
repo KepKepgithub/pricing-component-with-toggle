@@ -78,6 +78,10 @@
                 border: 2px solid #7478BF;
                 cursor: pointer;
             }
+            &:focus{
+                outline: dashed;
+                outline-color: black;
+            }
         }
         // the middle card
         &:nth-child(2){
@@ -94,6 +98,21 @@
                     color: white;
                 }
             }
+        }
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    .card{
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+        &__wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &:nth-child(2){
+            padding: 3rem 0;
         }
     }
 }

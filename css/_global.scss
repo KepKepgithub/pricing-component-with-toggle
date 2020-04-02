@@ -15,11 +15,13 @@ body{
         margin: auto;
         padding: 0 1rem;
         overflow: hidden;
+        position: relative;
     }
 }
 
 @media only screen and (min-width:1024px){
     .page_wrap{
         max-width: 1440px;
+        padding: 0 10rem;
     }
 }
